@@ -1,6 +1,7 @@
 package com.mindex.challenge.data;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Employee {
     private String employeeId;
@@ -53,8 +54,8 @@ public class Employee {
         this.department = department;
     }
 
-    public List<Employee> getDirectReports() {
-        return directReports;
+    public Optional<List<Employee>> getDirectReports() {
+        return Optional.ofNullable(directReports);
     }
 
     public void setDirectReports(List<Employee> directReports) {
